@@ -56,7 +56,7 @@ stages {
 }
      stage('Artifact upload') {
       steps {
-    nexusArtifactUploader artifacts: [[artifactId: 'hello-world-servlet-example', classifier: '', file: '/var/lib/jenkins/workspace/sample-pipline/target/helloworld.war', type: 'war']], credentialsId: 'nexus', groupId: 'com.geekcap.vmturbo', nexusUrl: 'http://172.31.22.177:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'https://github.com/lakidisisindri/hello-world-servlet.git', version: '1.0-SNAPSHOT'
+    nexusArtifactUploader artifacts: [[artifactId:'hello-world-servlet-example', classifier: '', file:'/var/lib/jenkins/workspace/sample-pipline/target/helloworld.war', type:'war']], credentialsId: 'nexus', groupId: 'com.geekcap.vmturbo', nexusUrl:'http://172.31.22.177:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'https://github.com/lakidisisindri/hello-world-servlet.git', version: '1.0-SNAPSHOT'
  }
     }
 }
